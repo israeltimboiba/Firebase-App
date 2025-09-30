@@ -50,7 +50,7 @@ class _NotesPageState extends State<NotesPage> {
      await _col.add({
        'description': text,
        'createdAt': FieldValue.serverTimestamp(),
-       }).then(
+     }).then(
            (note) => Notifications.show(
              id: note.id.hashCode,
              title: 'Nota criada',
