@@ -223,7 +223,8 @@ class _MapViewerEditorPageState extends State<MapViewerEditorPage> {
      final resp = await http.get(
        uri,
        headers: const {"Accept": "application/json"},
-     );
+
+      );
      if (resp.statusCode == 200) {
        final json = jsonDecode(resp.body) as Map<String, dynamic>;
        return (json['display_name'] ?? '').toString();
